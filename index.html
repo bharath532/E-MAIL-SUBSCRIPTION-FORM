@@ -14,9 +14,14 @@
         <form name="submit-to-google-sheet">
             <input type="email" name="Email" placeholder="Your email id" required>
             <button type="submit"><img src="images/send-icon.png" width="20px"></button>
+            <br>
         </form>
         <span id="msg"></span>
+        <span id="err"></span>
+        <span></span>
     </div>
+
+
 
     <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwRWWyjPLw3uhbSG0uggRC0W56-2p1g6rsvsTDfe3OjY00DnHx6lpGw0ACSzwCRrpRBRA/exec'
@@ -32,8 +37,13 @@
             msg.innerHTML = "" 
         },5000)
         form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
+    })
+    .catch(error => console.error('Error!', error.message))
+    err.innerHTML="error found"
+    setTimeout(()=>{
+        err.innerHTML=""
+        form.reset()
+    },2000)
   })
 </script>
 
