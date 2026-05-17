@@ -49,7 +49,7 @@ form button{
 span{
     color: #61b752;
     margin-top: 10px;
-    
+    display: block;
 }
 
 
@@ -119,3 +119,4 @@ span{
     height: 60px;
   }
 }
+

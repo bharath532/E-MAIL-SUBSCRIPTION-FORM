@@ -1,7 +1,8 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwRWWyjPLw3uhbSG0uggRC0W56-2p1g6rsvsTDfe3OjY00DnHx6lpGw0ACSzwCRrpRBRA/exec'
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById("msg")
-  
+  const err = document.getElementById("err")
+
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
